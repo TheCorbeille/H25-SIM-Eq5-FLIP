@@ -2,7 +2,7 @@
 Projet d'intégration H25
 
 Équipe:
--Adrien Corbeil\n
--Mark Saba
--Raymond Qiu
--Alexandre Mudura
+
+Adrien Corbeil, Mark Saba, Raymond Qiu, Alexandre Mudura
+
+
