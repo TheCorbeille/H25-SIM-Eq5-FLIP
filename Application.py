@@ -15,6 +15,8 @@ def apply_settings():
         # Validate inputs
         if 0 <= vitesse <= 300 and 0 <= angle <= 45:
             control_motor(vitesse, angle)
+            entree_vitesse.delete(0, tk.END)
+            entree_angle.delete(0, tk.END)
         else:
             messagebox.showerror("Invalide", "Vitesse doit etre entre 0rpm et 300rpm et angle entre 0° et 45°.")
             entree_vitesse.delete(0, tk.END)
@@ -32,8 +34,9 @@ root.geometry("500x300")
 frame = ttk.Frame(root, padding="10")
 frame.pack(fill=tk.BOTH, expand=True)
 
-vitesse_label = ttk.Label(frame, text="Vitesse (0-300rpm):")
+vitesse_label = ttk.Label(frame, text="Vitesse du moteur (0-300rpm):")
 vitesse_label.grid(row=0, column=0, sticky=tk.W)
+
 
 entree_vitesse = ttk.Entry(frame, justify=tk.CENTER)
 entree_vitesse.grid(row=0, column=1, sticky=tk.EW)
